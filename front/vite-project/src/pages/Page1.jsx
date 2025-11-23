@@ -1,6 +1,9 @@
 function Page1() {
     return (
-        <div>Page1</div>
+        <>
+            <div>{test}</div>
+            <div>Page1</div>
+        </>
     )
 
 
