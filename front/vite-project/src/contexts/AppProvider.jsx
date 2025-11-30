@@ -12,10 +12,10 @@ import { AuthProvider } from "./authContext";
 import { AppSettingProvider } from "./AppSettingContext";
 
 
-export const AppProvider = ({ children}) => {
+export const AppProvider = ({ children }) => {
 
     return (
-        <AuthProvider> 
+        <AuthProvider>
             <AppSettingProvider>
                 {children}
             </AppSettingProvider>
