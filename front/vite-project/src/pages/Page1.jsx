@@ -1,8 +1,10 @@
+import { BASE_URL } from "../constants/api";
+
 function Page1() {
     return (
         <>
-            <div>{test}</div>
-            <div>Page1</div>
+
+            <div>{BASE_URL}</div>
         </>
     )
 

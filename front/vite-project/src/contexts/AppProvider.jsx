@@ -7,7 +7,7 @@ Provider 통합 관리하는 컴포넌트
 ===============================================================*/
 
 // 로그인 유저 정보 {name, tel}
-import { AuthProvider } from "./authContext";
+import { AuthProvider } from "./AuthContext";
 // 앱 설정 정보 {teme, language}
 import { AppSettingProvider } from "./AppSettingContext";
 
