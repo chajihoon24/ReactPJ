@@ -1,5 +1,4 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -14,6 +13,7 @@
 }
 
 body {
+  font-family: 'Pretendard', sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
@@ -21,7 +21,10 @@ body {
   min-height: 100vh;
   font-size: 16px;     
 }
-
+::selection {
+  background: #cccccc; /* 원하는 색상 */
+      /* 선택된 텍스트 색상 */
+}
 
 a {
   font-weight: 500;
@@ -68,4 +71,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.color_container {
+  display: flex;
+  gap: 30px;
+  width: 1200px;
+  margin: auto;
+  margin-top:30px 
+}
+.color_container > div{
+  border-radius: 10px;
+  user-select: none
+  
+}
+
+.title1{
+  color: #000;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: normal;
+
+}
+.title2{
+  color: #383838;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0px;
+
 }

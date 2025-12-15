@@ -1,0 +1,60 @@
+/* 공통 스타일 (Block) */
+.colorSample {
+  width: 10%;
+  height: 120px;
+
+  color: transparent;        /* 기본 글자 숨김 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+/* 개별 색상 스타일 (Modifier 역할) */
+.colorSample.smart_blue {
+  background-color: #0466c8;
+}
+
+.colorSample.steel_azure {
+  background-color: #0353a4;
+}
+
+.colorSample.regal_navy {
+  background-color: #023e7d;
+}
+
+.colorSample.prussian_blue1 {
+  background-color: #002855;
+}
+
+.colorSample.prussian_blue2 {
+  background-color: #001845;
+}
+
+.colorSample.prussian_blue3 {
+  background-color: #001233;
+}
+
+.colorSample.twilight_indigo {
+  background-color: #33415c;
+}
+
+.colorSample.blue_slate {
+  background-color: #5c677d;
+}
+
+.colorSample.slate_grey {
+  background-color: #7d8597;
+}
+
+.colorSample.cool_steel {
+  background-color: #979dac;
+}
+
+/* hover 효과 */
+.color_container > div:hover {
+  scale: calc(1.1);
+  cursor: pointer;
+  color: white;
+}
