@@ -1,9 +1,9 @@
 export default function Footer() {
     return (
         <div>
-            <header>
-                <div> © 2025 My Website. All rights reserved.</div>
-            </header>
+            <footer className="mt-auto text-center p-4 text-gray-500">
+                <div> © 2025 MIMIR. All rights reserved.</div>
+            </footer>
         </div>
-    )
- }
+    );
+}

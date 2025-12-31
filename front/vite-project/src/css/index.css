@@ -1,92 +1,67 @@
 @import "tailwindcss";
 
-
-
 body {
-  font-family: 'Pretendard', sans-serif;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  font-size: 16px;     
+    font-family: "Pretendard", sans-serif;
+    margin: 0;
 }
 ::selection {
-  background: #cccccc; /* 원하는 색상 */
-      /* 선택된 텍스트 색상 */
+    background: #cccccc; /* 원하는 색상 */
+    /* 선택된 텍스트 색상 */
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 .color_container {
-  display: flex;
-  gap: 30px;
-  width: 1200px;
-  margin: auto;
-  margin-top:30px 
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 30px;
 }
-.color_container > div{
-  border-radius: 10px;
-  user-select: none
-  
+.color_container > div {
+    border-radius: 10px;
+    user-select: none;
 }
 
-.title1{
-  color: #000;
-  font-size: 80px;
-  font-weight: 800;
-  letter-spacing: 0px;
-  line-height: normal;
-
+.platform_letter {
+    display: inline-flex;
+    gap: 4px;
 }
-.title2{
-  color: #383838;
-  font-size: 40px;
-  font-weight: 800;
-  letter-spacing: 0px;
+.platform_letter span {
+    display: inline-block;
+    animation: bounce 0.8s infinite ease-in-out;
+}
+.platform_letter span:nth-child(1) {
+    animation-delay: 0s;
+}
+.platform_letter span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.platform_letter span:nth-child(3) {
+    animation-delay: 0.2s;
+}
 
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
