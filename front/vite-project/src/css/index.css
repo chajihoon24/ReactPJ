@@ -3,6 +3,8 @@
 body {
     font-family: "Pretendard", sans-serif;
     margin: 0;
+    background-color: #f3f4f6;
+
 }
 ::selection {
     background: #cccccc; /* 원하는 색상 */
@@ -64,4 +66,9 @@ button {
     50% {
         transform: translateY(-15px);
     }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
