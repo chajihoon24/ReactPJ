@@ -8,7 +8,7 @@ export default function Nav() {
         <nav className="flex">
             <ul className="flex-grow items-center flex justify-center gap-8 text-lg font-medium text-gray-700">
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/home">Home</Link>
                 </li>
                 <li>
                     <Link to="/page1">Page1</Link>
@@ -23,7 +23,7 @@ export default function Nav() {
                     <Link to="/page4">Page4</Link>
                 </li>
                 <li>
-                    <Link to="/login">테스트</Link>
+                    <Link to="/test1">테스트</Link>
                 </li>
             </ul>
 

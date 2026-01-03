@@ -88,7 +88,6 @@ export default function Login() {
                             <input
                                 id="password"
                                 type="password"
-                                autocomplete="off"
                                 placeholder="비밀번호를 입력하세요"
                                 className="    h-11
                                                 rounded-md
@@ -121,7 +120,7 @@ export default function Login() {
 
                         {/* LOGIN BUTTON */}
                         <div className="-mt-5 ">
-                            <Link to={"/"}>
+                            <Link to={"/home"}>
                                 <button
                                     className="w-full h-11 mt-4 rounded-md bg-indigo-600
                                             text-white font-semibold hover:bg-indigo-700
@@ -132,7 +131,7 @@ export default function Login() {
                             </Link>
 
                             <div className="relative group  mt-6">
-                                <Link to={"/"}>
+                                <Link to={"/home"}>
                                 <button
                                     className="w-full h-11 rounded-md bg-indigo-600
                                             text-white font-semibold hover:bg-indigo-700
