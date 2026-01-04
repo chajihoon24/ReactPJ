@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useAppSetting } from "../contexts/AppSettingContext";
 
-const sampleArr = [
-    "대시보드",
-    "인사관리",
-    "재고관리",
-    "회계재무",
-    "입출고관리",
-    "시스템관리",
-];
+
 
 function createList(arr) {
+
+    
+    
+    
     return arr.map((title, index) => (
         <li key={index}>
             <div className="flex py-2 ml-6">
@@ -28,6 +26,17 @@ function createList(arr) {
 }
 
 export default function SideNav() {
+    
+        const { theme, toggleTheme } = useAppSetting();
+        
+        const sampleArr = [
+            "대시보드",
+            "인사관리",
+            "재고관리",
+            "회계재무",
+            "입출고관리",
+            "시스템관리",
+        ];
     return (
         <div className="w-[250px] bg-white font-bold text-[16px] text-gray-700  fixed top-[56px] h-[calc(100vh-3.5rem)] flex-col z-50 flex">
             {/*상단*/}
@@ -46,10 +55,15 @@ export default function SideNav() {
 
             {/* 하단 */}
             <div className=" mt-auto py-3 ml-6 text-gray-500 text-sm">
-                 <label class="flex cursor-pointer gap-2">
-                    <span class="label-text">Light</span>
-                    <input type="checkbox" value="synthwave" class="toggle theme-controller" />
-                    <span class="label-text">Dark</span>
+                <label className="flex gap-2 items-center">
+                    <span>Light</span>
+                    <input
+                        type="checkbox"
+                        className="toggle"
+                        checked={theme === "dark"}
+                        onChange={toggleTheme}
+                    />
+                    <span>Dark</span>
                 </label>
                 <div>made by 차지훈</div>
             </div>

@@ -351,14 +351,47 @@ ul {
 }
 
 
-.title1{
-  @apply text-5xl font-bold text-gray-800
+
+:root {
+  --title-color-1: #1F2937; /* gray-800 */
+  --title-color-2: #374151; /* gray-700 */
+  --text-basic:   #4A5565; /* gray-600 */
+
+
+  --bg-color-1: #ffffff;
 }
 
-.title2{
-  @apply text-[30px] font-bold text-gray-700
+.dark {
+  --title-color-1: #E2E8F0;
+  --title-color-2: #E2E8F0;
+  --text-basic:    #E2E8F0;
+
+  --bg-color-1: #333C50;
 }
 
-.basic-text{
-  @apply text-gray-600 text-[16px] leading-relaxed
+.bg-white{
+
+  background-color: var(--bg-color-1)
+
+}
+.bg-gray-50{
+  background-color: var(--bg-color-1)
+}
+.text-gray-600{
+  color: var(--text-basic);  
+}
+
+.title1 {
+  @apply text-5xl font-bold;
+  color: var(--title-color-1);
+}
+
+.title2 {
+  @apply text-[30px] font-bold;
+  color: var(--title-color-2);
+}
+
+.basic-text {
+  @apply text-[16px] leading-relaxed;
+  color: var(--text-basic);
 }
