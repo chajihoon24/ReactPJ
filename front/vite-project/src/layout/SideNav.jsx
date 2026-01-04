@@ -46,6 +46,11 @@ export default function SideNav() {
 
             {/* 하단 */}
             <div className=" mt-auto py-3 ml-6 text-gray-500 text-sm">
+                 <label class="flex cursor-pointer gap-2">
+                    <span class="label-text">Light</span>
+                    <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+                    <span class="label-text">Dark</span>
+                </label>
                 <div>made by 차지훈</div>
             </div>
         </div>

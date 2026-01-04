@@ -1,7 +1,7 @@
 import bgImg from "../assets/image/arora.jpg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import FindIdModal from "../modal/FindIdMadal";
+import FindIdModal from "../modalFrame/FindIdModal";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
