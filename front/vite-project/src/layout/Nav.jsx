@@ -25,6 +25,9 @@ export default function Nav() {
                 <li>
                     <Link to="/test1">테스트</Link>
                 </li>
+                <li>
+                    <Link to="/guide">가이드</Link>
+                </li>
             </ul>
 
             <ul className="ml-auto flex-grow items-center flex justify-end gap-8 text-[14px] font-medium text-gray-700">

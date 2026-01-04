@@ -1,6 +1,6 @@
 import bgImg from "../assets/image/arora.jpg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FindIdModal from "../modal/FindIdMadal";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +10,15 @@ export default function Login() {
     const [openFindId, setOpenFindId] = useState(false); 
     const [isActive, setIsActive] = useState(false);
     const [param, setParam] = useState("");
+    const [disabled, setDisabled] = useState(true);
 
+    useEffect(() => {
+    const timer = setTimeout(() => {
+        setDisabled(false);
+    },3000);
 
+    return () => clearTimeout(timer);
+    }, []);
     return (
         <div className="relative w-screen h-screen overflow-hidden">
 
@@ -26,7 +33,7 @@ export default function Login() {
 
 
             {/* 중앙 정렬 레이어 */}
-            <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${isActive ? "swing-out-left-fwd ":" delay-2 opacity-100"}`}>
+            <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ${isActive ? "swing-out-left-fwd ":" delay-2 opacity-100"} ${disabled ? "pointer-events-none" : ""}`}>
                 <div className="shadow-2xl     bg-gray-800/50
                                 backdrop-blur-3xl w-[550px] h-[560px] rounded-xl 
                                 flex flex-col items-center scale-in-ver-center relative ">
