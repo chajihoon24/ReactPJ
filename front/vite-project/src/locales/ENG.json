@@ -7,5 +7,7 @@
     "find_id": "Find ID",
     "find_password": "Find Password",
     "remember_id": "Remember ID",
-    "sign_up": "Sign Up"
+    "sign_up": "Sign Up",
+    "id_placeholder" : "Enter your ID",
+    "password_placeholder" : "Enter your password"
 }

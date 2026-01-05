@@ -53,7 +53,7 @@ export default function Login() {
                     {/* 입력 영역 */}
                     <div className="mt-35 w-full px-16 space-y-6 text-fade-in2 select-none">
                         <div className="fixed right-0 top-0">
-                            <button className="text-gray-300 text-xl m-5">
+                            <button className="!text-gray-50 text-xl m-5 cursor-pointer">
                                 <FontAwesomeIcon
                                     icon={faGlobe}
                                     onClick={() => {
@@ -79,7 +79,7 @@ export default function Login() {
                                 id="userId"
                                 type="text"
                                 autocomplete="off"
-                                placeholder="아이디를 입력하세요"
+                                placeholder={t("id_placeholder")}
                                 className="    h-11
                                                 rounded-md
                                                 px-3
@@ -107,7 +107,7 @@ export default function Login() {
                             <input
                                 id="password"
                                 type="password"
-                                placeholder="비밀번호를 입력하세요"
+                                placeholder={t("password_placeholder")}
                                 className="    h-11
                                                 rounded-md
                                                 px-3
@@ -185,7 +185,7 @@ export default function Login() {
                 }}
             />
 
-            <footer className="fixed bottom-0 flex w-screen text-center p-4 text-gray-500">
+            <footer className="fixed bottom-0 flex w-screen text-center p-4 !text-gray-500">
                 <div className="mx-auto ">
                     {" "}
                     © 2025 MIMIR. All rights reserved.
