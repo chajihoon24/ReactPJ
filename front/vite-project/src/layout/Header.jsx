@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 px-8 h-13 bg-white flex items-center">
+        <header className="sticky top-0 z-50 px-8 h-15 bg-white flex items-center shadow-sm">
             {/* 헤더 로고 */}
             <div className="">
                 <div className="text-3xl font-bold text-black space tracking-wide">

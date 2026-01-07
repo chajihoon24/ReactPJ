@@ -7,6 +7,7 @@ export const useAppSetting = () => useContext(AppSettingContext);
 export const AppSettingProvider = ({ children }) => {
     const [theme, setTheme] = useState("light");
     const [language, setLanguage] = useState("KOR");
+    const [devMode, setDevMode] = useState(false);
 
     useEffect(() => {
         if (theme === "dark") {
@@ -29,13 +30,20 @@ export const AppSettingProvider = ({ children }) => {
         i18n.changeLanguage(language === "KOR" ? "ENG" : "KOR");
     };
 
+    // 개발자 모드 토글
+    const devModeToggle = () => {
+        setDevMode((prev) => !prev);
+    }
+
     return (
         <AppSettingContext.Provider
             value={{
                 theme,
                 language,
+                devMode,
                 toggleTheme,
                 changeLanguage,
+                devModeToggle
             }}
         >
             {children}

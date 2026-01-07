@@ -1,10 +1,23 @@
-import { BasicBox } from "../components/container";
+import { BasicBox } from "../components/box";
+import { GridGuide12 } from "../components/dev-assist";
 
 function Test1() {
     return (
         <>
+            
+            <div className="">
+
+            </div>
+
+
+
+
+
+
+
             {/* 라이트 모드 */}
-            <BasicBox className="h-[450px]">
+            <BasicBox className="relative h-[450px]">
+                <GridGuide12 />
                 <div className="flex  gap-2 w-35 bg-amber-300">
                     <div className="text-[16px]">Mistery</div>
                     <div className="text-[1rem]">Mistery</div>

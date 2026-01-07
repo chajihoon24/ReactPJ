@@ -13,7 +13,7 @@ export default function Nav() {
         <>
             {/* 왼쪽 Nav */}
 
-            <nav className="flex basic-text">
+            <nav className="flex basic-text ">
                 <ul className="flex-grow items-center flex justify-center gap-8">
                     <li>
                         <Link to="/home">Home</Link>
