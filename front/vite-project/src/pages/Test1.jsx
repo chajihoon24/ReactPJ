@@ -5,7 +5,10 @@ function Test1() {
         <>
             {/* 라이트 모드 */}
             <BasicBox className="h-[450px]">
-                <div>Mistery</div>
+                <div className="flex  gap-2 w-35 bg-amber-300">
+                    <div className="text-[16px]">Mistery</div>
+                    <div className="text-[1rem]">Mistery</div>
+                </div>
             </BasicBox>
 
             {/* 다크모드 */}
