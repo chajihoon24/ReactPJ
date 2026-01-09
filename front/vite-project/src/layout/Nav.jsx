@@ -6,51 +6,46 @@ import { useTranslation } from "react-i18next";
 import { useAppSetting } from "../contexts/AppSettingContext";
 
 export default function Nav() {
-    const { t, i18n } = useTranslation();
-    const { language, changeLanguage } = useAppSetting();
+    const { t } = useTranslation();
+    const { language, changeLanguage, devModeToggle } = useAppSetting();
 
     return (
         <>
             {/* 왼쪽 Nav */}
 
-            <nav className="flex basic-text ">
-                <ul className="flex-grow items-center flex justify-center gap-8">
+            <nav className="ml-20 justify-between info-txt w-full hidden md:flex">
+                <ul className="grow items-center flex justify-center gap-8 whitespace-nowrap">
                     <li>
-                        <Link to="/home">Home</Link>
+                        <Link to="/dashboard">{t("nav.dashboard")}</Link>
                     </li>
                     <li>
-                        <Link to="/page1">Page1</Link>
+                        <Link to="/page1">{t("nav.bookmarks")}</Link>
                     </li>
                     <li>
-                        <Link to="/page2">Page2</Link>
+                        <Link to="/page2">{t("nav.releases")}</Link>
                     </li>
                     <li>
-                        <Link to="/page3">Page3</Link>
+                        <Link to="/page2">{t("nav.platform")}</Link>
                     </li>
                     <li>
-                        <Link to="/page4">Page4</Link>
+                        <Link to="/test1">{t("test_temp")}</Link>
                     </li>
                     <li>
-                        <Link to="/test1">테스트</Link>
-                    </li>
-                    <li>
-                        <Link to="/guide">가이드</Link>
+                        <Link to="/guide">{t("nav.guide")}</Link>
                     </li>
                 </ul>
 
                 {/* 오른쪽 Nav */}
 
-                <ul className="ml-auto flex-grow items-center flex justify-end gap-8 text-[14px] font-medium text-gray-700">
+                <ul className="ml-auto flex-grow items-center flex justify-end gap-8 text-[14px] whitespace-nowrap">
                     <li>
-                        <Link to="/others">
-                            <div className="platform_letter font-extrabold">
-                                <span>플</span>
-                                <span>랫</span>
-                                <span>폼</span>
-                            </div>
-                        </Link>
+                        <button
+                            onClick={devModeToggle}
+                            className="basic-text p-2 bg-gray-400 rounded-md"
+                        >
+                            devMode
+                        </button>
                     </li>
-
                     <li>
                         <div className="flex mt-auto">
                             <button
@@ -77,7 +72,9 @@ export default function Nav() {
 
                             <div className="ml-4 w-10 h-10 rounded-full bg-blue-300"></div>
                             <Link to="/">
-                                <div className="ml-4">차지훈 님</div>
+                                <div className="ml-4">
+                                    차지훈 {t("nav.sir")}
+                                </div>
                                 <div className="ml-4 text-gray-400">
                                     사번 : D410038Q
                                 </div>

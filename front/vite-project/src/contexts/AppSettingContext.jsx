@@ -32,8 +32,9 @@ export const AppSettingProvider = ({ children }) => {
 
     // 개발자 모드 토글
     const devModeToggle = () => {
+        console.debug("Dev Mode:", !devMode);
         setDevMode((prev) => !prev);
-    }
+    };
 
     return (
         <AppSettingContext.Provider
@@ -43,7 +44,7 @@ export const AppSettingProvider = ({ children }) => {
                 devMode,
                 toggleTheme,
                 changeLanguage,
-                devModeToggle
+                devModeToggle,
             }}
         >
             {children}

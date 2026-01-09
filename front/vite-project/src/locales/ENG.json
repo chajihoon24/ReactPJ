@@ -8,6 +8,17 @@
     "find_password": "Find Password",
     "remember_id": "Remember ID",
     "sign_up": "Sign Up",
-    "id_placeholder" : "Enter your ID",
-    "password_placeholder" : "Enter your password"
+    "id_placeholder": "Enter your ID",
+    "password_placeholder": "Enter your password",
+
+    "nav": {
+        "dashboard": "Dashboard",
+        "bookmarks": "Bookmarks",
+        "releases": "Releases",
+        "platform": "Platform",
+        "test_temp": "Test (Temp)",
+        "guide": "Guide",
+
+        "sir": ""
+    }
 }

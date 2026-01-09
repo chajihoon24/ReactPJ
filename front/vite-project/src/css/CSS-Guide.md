@@ -15,9 +15,15 @@ text-9xl  → 128px  (8rem)
 
 
 [사용 채택한 폰트 크기] 
-    text-sm   → 14px   (0.875rem)
-    text-base → 16px   (1rem)
 
+<!-- 대 타이틀     -->
+    h1 - 64px (4rem)
+    h2 - 51px (3.2rem)
+    h3 - 38px (2.4rem)
+<!--기본-->
+    text-base → 16px   (1rem)
+<!--가장 낮은 레벨-->
+    text-sm   → 14px   (0.875rem)
 
 [사용 채택한 두께]
 <!-- 디자인 표준임 이 두가지만 사용할 것 -->
@@ -26,7 +32,7 @@ text-9xl  → 128px  (8rem)
 
 
 [글씨 행간 설정]
-<!-- 1줄 단문 -->
+<!-- 2줄 단문 -->
     line-height: 1.5  ==  leading-normal
 
 <!-- 3줄이상 장문 -->

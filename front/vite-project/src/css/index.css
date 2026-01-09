@@ -4,26 +4,24 @@
 @plugin "daisyui";
 
 body {
+    position: relative;
     font-family: "Pretendard", sans-serif;
     margin: 0;
     background-color: var(--app-bg-color);
+    
 }
-::selection {
-    background: #cccccc; /* 원하는 색상 */
-    /* 선택된 텍스트 색상 */
+/* 초기화 */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
 }
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
 
 hr {
-  border: none;
-  border-top: 1px solid var(--hr-color);
+    border: none;
+    border-top: 1px solid var(--hr-color);
 }
-
 
 .color_container {
     display: flex;
@@ -351,13 +349,12 @@ ul {
 
     --bg-color-1: #ffffff;
 
-    --hr-color:#1f2937 ;
-
+    --hr-color: #1f2937;
 }
 
 .dark {
     --title-color-1: #ffffff;
-    --title-color-2: #ffffffE6;
+    --title-color-2: #ffffffe6;
     --text-basic: #ffffff99;
 
     --bg-color-1: #182030;
@@ -378,7 +375,7 @@ ul {
     --text-black: #ffffff;
     --text-white: black;
 
-    --hr-color:#6b7280 ;
+    --hr-color: #6b7280;
 }
 
 /* 임시 css */
@@ -391,8 +388,6 @@ ul {
 .text-gray-600 {
     color: var(--text-basic);
 }
-/* 임시 css */
-
 .title1 {
     @apply text-5xl font-bold;
     color: var(--title-color-1);
@@ -402,6 +397,8 @@ ul {
     @apply text-[30px] font-bold;
     color: var(--title-color-2);
 }
+/* 임시 css */
+
 
 .basic-text {
     @apply text-[16px] leading-relaxed;

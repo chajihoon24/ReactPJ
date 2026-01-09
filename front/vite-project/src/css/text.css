@@ -1,11 +1,61 @@
+@import "tailwindcss";
+/* 타이틀 스케일은 3가지 계층 구조로 되어 있습니다. */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    margin-top: 2.5rem;
+}
 
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    margin-top: 2.5rem;
+}
 
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d0d0d;
+    margin-top: 2.5rem;
+}
 
+/* 본문 텍스트 스타일. */
 
-assist-col-12{
-    grid-column: span 12;
+.info-tit {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.info-txt {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4a5565;
+}
+
+.info-Subtxt {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #565f6b;
+}
+
+.info-wrapper {
+    margin-top: 40px;
 }
 
 
-
-
+.nav-logo{
+    @apply tracking-wide;
+    color:#0d0d0d;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+.nav-app-ver{
+    @apply ml-3 text-gray-400 text-xs;
+}

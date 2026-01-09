@@ -1,28 +1,47 @@
-import { BasicBox } from "../components/box";
-import { GridGuide12 } from "../components/dev-assist";
-
+import { BasicBox, MainBox, TestBox } from "../components/box";
+import { BreadCrumb } from "../components/breadCrumb";
 function Test1() {
     return (
         <>
-            
-            <div className="">
-
-            </div>
-
-
-
-
-
-
+            <div className=""></div>
 
             {/* 라이트 모드 */}
-            <BasicBox className="relative h-[450px]">
-                <GridGuide12 />
-                <div className="flex  gap-2 w-35 bg-amber-300">
-                    <div className="text-[16px]">Mistery</div>
-                    <div className="text-[1rem]">Mistery</div>
+            <BasicBox className="relative h-[35px]">
+                <div className="flex  gap-2 w-400 ">
+                    <div className="w-[450px]">BasicBox</div>
                 </div>
             </BasicBox>
+
+            <TestBox className="h-[1500px] bg-white flex flex-col">
+                <BreadCrumb></BreadCrumb>
+                <h1 className="">컴포넌트 가이드라인</h1>
+                <h2>계층의 이해</h2>
+                <h3>애플리케이션 프레임워크 </h3>
+                <div className="info-wrapper">
+                    <div className="info-tit">웹서버 Web Server</div>
+                    <div className="info-txt w-200">
+                        일반적으로 라이브러리나 프레임워크는 특정 업무나 기술에
+                        특화된 목표 가지고 만들어진다. 그래서 프레임워크란
+                        애플리케이션 특정 부분에서 주로 동작하는 한가지 기술에
+                        집중된다.
+                    </div>
+                </div>
+                <div className="info-wrapper">
+                    <div className="info-tit">참조용 구현</div>
+                    <div className="info-txt w-200">
+                        자바 서블랫과 JSP 규격의 '참조용 구현'으로 평가되고 있는
+                        버전과 소스코드 버전 둘 모두를 아파치 웹 사이트에서 얻을
+                        수 있다. 
+                    </div>
+                </div>
+                <h3>색의 3요소</h3>
+                <div className="info-tit">웹서버 Web Server</div>
+                <div className="info-txt w-200">
+                    자바 서블랫과 JSP 규격의 '참조용 구현'으로 평가되고 있는
+                    톰캣은, 개발자들의 개방적 협력 작업의 산물로 바이너리 버전과
+                    소스코드 버전 둘 모두를 아파치 웹 사이트에서 얻을 수 있다. 
+                </div>
+            </TestBox>
 
             {/* 다크모드 */}
             <BasicBox className="gap-8 h-[1400px] mt-4 bg-[#262931] items-center justify-center flex-wrap">
