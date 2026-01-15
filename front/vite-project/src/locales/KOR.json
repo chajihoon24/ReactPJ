@@ -19,6 +19,7 @@
         "test_temp": "테스트(임시)",
         "guide": "가이드",
 
-        "sir": "님"
+        "sir": "님",
+        "employee_id": "사번"
     }
 }

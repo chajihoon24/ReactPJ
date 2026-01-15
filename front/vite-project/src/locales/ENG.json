@@ -19,6 +19,7 @@
         "test_temp": "Test (Temp)",
         "guide": "Guide",
 
-        "sir": ""
+        "sir": "",
+        "employee_id": "No."
     }
 }

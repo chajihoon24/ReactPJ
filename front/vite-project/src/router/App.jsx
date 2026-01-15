@@ -9,8 +9,14 @@ import Login from "../pages/Login";
 import Page4 from "../pages/Page4";
 import Page3 from "../pages/Page3";
 import Page2 from "../pages/Page2";
-import Test1 from "../pages/Test1";
 import Guide from "../pages/Guide";
+
+import {
+    TestMain1440,
+    TestMain1600,
+    TestMainCustom,
+} from "../pages/test/TestMain";
+import TestLayout from "../layout/test/TestLayout";
 
 function App() {
     return (
@@ -30,8 +36,23 @@ function App() {
                         <Route path="/page2" element={<Page2 />} />
                         <Route path="/page3" element={<Page3 />} />
                         <Route path="/page4" element={<Page4 />} />
-                        <Route path="/test1" element={<Test1 />} />
                         <Route path="/guide" element={<Guide />} />
+                    </Route>
+
+                    {/*Test 페이지*/}
+                    <Route path="/test" element={<TestLayout />}>
+                        <Route
+                            path="testLayout1600"
+                            element={<TestMain1600 />}
+                        />
+                        <Route
+                            path="testLayout1440"
+                            element={<TestMain1440 />}
+                        />
+                        <Route
+                            path="testLayoutCustom"
+                            element={<TestMainCustom />}
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>

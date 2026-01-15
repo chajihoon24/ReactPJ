@@ -7,16 +7,27 @@ import SideNav from "./SideNav";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
 
+/*
+[구조요약]
+
+header(Nav 포함)
+sidebar + Content
+footer
+
+header : 페이지 최상단, 네비게이션 바 포함
+sidebar : 좌측 사이드바 (사이드 네비게이션) 
+Content : 메인 컨텐츠 영역
+footer : 페이지 최하단
+
+*/
 export default function AppLayout() {
     return (
         <>
-            <Header /> {/*Nav가 포함됨*/}
-            <main className="flex relative">
+            <Header />
+            <main className="flex relative w-full">
                 <Sidebar />
-
                 <Content>
                     <Outlet />
-                    {/*실제 컨텐츠가 표시되는 영역*/}
                 </Content>
             </main>
             <Footer />

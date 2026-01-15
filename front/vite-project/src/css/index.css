@@ -8,10 +8,14 @@ body {
     font-family: "Pretendard", sans-serif;
     margin: 0;
     background-color: var(--app-bg-color);
-    
 }
 /* 초기화 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
     font-size: inherit;
@@ -398,7 +402,6 @@ ul {
     color: var(--title-color-2);
 }
 /* 임시 css */
-
 
 .basic-text {
     @apply text-[16px] leading-relaxed;

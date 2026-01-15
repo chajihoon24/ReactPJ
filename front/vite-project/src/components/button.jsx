@@ -52,3 +52,25 @@ export function LoginBtn({ text, className = "", to = "/", ...props }) {
         </Link>
     );
 }
+
+export function LinkBtn({ text, className = "", to = "/", ...props }) {
+    return (
+        <Link
+            to={to}
+            className="
+    px-4 py-2
+    text-sm font-semibold
+    border border-gray-300
+    rounded-md
+    bg-white text-gray-800
+    hover:bg-gray-800
+
+    transition
+
+  "
+            {...props}
+        >
+            {text}
+        </Link>
+    );
+}

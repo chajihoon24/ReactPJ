@@ -25,7 +25,7 @@ export default function Nav() {
                         <Link to="/page2">{t("nav.releases")}</Link>
                     </li>
                     <li>
-                        <Link to="/page2">{t("nav.platform")}</Link>
+                        <Link to="/page3">{t("nav.platform")}</Link>
                     </li>
                     <li>
                         <Link to="/test1">{t("test_temp")}</Link>
@@ -76,7 +76,7 @@ export default function Nav() {
                                     차지훈 {t("nav.sir")}
                                 </div>
                                 <div className="ml-4 text-gray-400">
-                                    사번 : D410038Q
+                                    {t("nav.employee_id")} : D410038Q
                                 </div>
                             </Link>
                         </div>

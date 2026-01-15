@@ -3,21 +3,21 @@
 h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #0d0d0d;
+    color: #1d1d1d;
     margin-top: 2.5rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #0d0d0d;
+    color: #1d1d1d;
     margin-top: 2.5rem;
 }
 
 h3 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #0d0d0d;
+    color: #1d1d1d;
     margin-top: 2.5rem;
 }
 
@@ -49,13 +49,12 @@ h3 {
     margin-top: 40px;
 }
 
-
-.nav-logo{
+.nav-logo {
     @apply tracking-wide;
-    color:#0d0d0d;
+    color: #0d0d0d;
     font-weight: 700;
     font-size: 1.875rem;
 }
-.nav-app-ver{
+.nav-app-ver {
     @apply ml-3 text-gray-400 text-xs;
 }
