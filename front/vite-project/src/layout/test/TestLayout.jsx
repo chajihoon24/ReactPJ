@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header";
 
-import Footer from "../Footer";
 import TestSidebar from "../../pages/test/TestSidebar";
 import { useState } from "react";
 export default function TestLayout() {
@@ -14,7 +13,6 @@ export default function TestLayout() {
                 <TestSidebar />
                 <Outlet />
             </main>
-            <Footer />
         </div>
     );
 }
