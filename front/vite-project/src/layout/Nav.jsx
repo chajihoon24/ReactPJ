@@ -82,7 +82,7 @@ export default function Nav() {
                         </div>
                     </li>
 
-                    <li>
+                    <li className="mr-8">
                         <Link to="/login">{t("logout")}</Link>
                     </li>
                 </ul>

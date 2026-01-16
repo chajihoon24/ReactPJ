@@ -2,7 +2,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import MainContent from "./MainContent";
 import SideNav from "./SideNav";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
@@ -22,16 +21,18 @@ footer : 페이지 최하단
 */
 export default function AppLayout() {
     return (
-        <>
+        <div className="h-screen">
             <Header />
-            <main className="flex relative w-full">
-                <Sidebar />
-                <Content>
-                    <Outlet />
-                </Content>
+            <main className="flex flex-col relative w-full h-[calc(100vh-60px)]">
+                <div className="flex w-full h-full">
+                    <Sidebar />
+                    <Content>
+                        <Outlet />
+                    </Content>
+                </div>
+                {/* <Footer /> */}
             </main>
-            <Footer />
-        </>
+        </div>
     );
 }
 
