@@ -1,17 +1,30 @@
 // copy OuterHTML
+// 아이콘 컴포넌트 모음 파일입니다.
+// setting
+const DEFAULT_COLOR = "#434343";
+const DEFAULT_SIZE = 24;
+const DEFAULT_WEIGHT = 1;
+
 
 interface IconProps {
     size?: number;
     className?: string;
     fill?: string;
+    stroke?: string;
     weight?: number;
 }
 
+
+//=============================================================
+//아이콘 컴포넌트
+
+
 export function IconBookmark({
-    size = 28,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight = 1,
+    weight = DEFAULT_WEIGHT,
+    stroke = DEFAULT_COLOR,
 }: IconProps) {
     return (
         <svg
@@ -20,11 +33,11 @@ export function IconBookmark({
             height={size}
             viewBox="0 0 24 24"
             fill={fill}
-            stroke="currentColor"
+            stroke={stroke}
             stroke-width={weight}
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="lucide lucide-bookmark-icon lucide-bookmark"
+            className={`lucide lucide-bookmark-icon lucide-bookmark ${className}`}
         >
             <path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z" />
         </svg>
@@ -32,10 +45,11 @@ export function IconBookmark({
 }
 
 export function IconInfo({
-    size = 28,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight = 1,
+    stroke = DEFAULT_COLOR,
+    weight = DEFAULT_WEIGHT,
 }: IconProps) {
     return (
         <svg
@@ -58,10 +72,11 @@ export function IconInfo({
 }
 
 export function IconTrash({
-    size = 28,
+    size = DEFAULT_SIZE,
     className,
-    fill = "none",
-    weight = 1,
+    fill = DEFAULT_COLOR,
+    stroke = DEFAULT_COLOR,
+    weight = DEFAULT_WEIGHT,
 }: IconProps) {
     return (
         <svg
@@ -69,7 +84,7 @@ export function IconTrash({
             height={size}
             viewBox="0 -960 960 960"
             width={size}
-            fill="#434343"
+            fill={fill}
         >
             <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
         </svg>
@@ -77,10 +92,11 @@ export function IconTrash({
 }
 
 export function IconSetting({
-    size = 24,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight = 1,
+    weight = DEFAULT_WEIGHT,
+    stroke = DEFAULT_COLOR,
 }: IconProps) {
     return (
         <svg
@@ -102,10 +118,10 @@ export function IconSetting({
 }
 
 export function IconRefresh({
-    size = 24,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight = 1,
+    weight = DEFAULT_WEIGHT,
 }: IconProps) {
     return (
         <svg
@@ -127,10 +143,10 @@ export function IconRefresh({
 }
 
 export function IconPanel({
-    size,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight=1.5,
+    weight = DEFAULT_WEIGHT,
 }: IconProps) {
     return (
         <svg
@@ -152,29 +168,27 @@ export function IconPanel({
 }
 
 export function IconEllipsis({
-    size=24,
+    size = DEFAULT_SIZE,
     className,
     fill = "none",
-    weight = 1.5,
+    weight = DEFAULT_WEIGHT,
 }: IconProps) {
-
-
-  return (
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={size}
-          height={size}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="lucide lucide-ellipsis-icon lucide-ellipsis"
-      >
-          <circle cx="12" cy="12" r="1" />
-          <circle cx="19" cy="12" r="1" />
-          <circle cx="5" cy="12" r="1" />
-      </svg>
-  );
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-ellipsis-icon lucide-ellipsis"
+        >
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+            <circle cx="5" cy="12" r="1" />
+        </svg>
+    );
 }

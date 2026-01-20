@@ -3,6 +3,8 @@ import { BasicBox } from "../components/box";
 import { TabItem } from "../components/tabs/tabs.types";
 import { Tabs } from "../components/tabs/Tabs";
 import { LinkBtn as Btn } from "../components/button/button";
+import { PageLoading } from "../components/loading/Loading";
+import { cn } from "../config/tailwind-merge";
 
 function Test1() {
     type MyTabKey = "info" | "input" | "button" | "checkbox";
@@ -32,6 +34,11 @@ function Test1() {
                     <div hidden={activeTab !== "info"} className="space-y-2">
                         <h2 className="text-lg font-semibold">정보</h2>
                         <p className="text-gray-600">인포탭 내용입니다.</p>
+                        <span
+                            className={cn(
+                                "loading loading-spinner text-info w-40 h-40 border-2",
+                            )}
+                        ></span>
                     </div>
 
                     <div hidden={activeTab !== "input"} className="space-y-2">

@@ -67,7 +67,7 @@ export default function Template() {
         flex items-center justify-center
         w-8 h-8 rounded
         text-gray-500
-        hover:bg-gray-200 hover:text-gray-700 mx-2 
+        hover:bg-gray-100 hover:text-gray-700 mx-2  
       "
                             title="히스토리 전체 삭제"
                         >
