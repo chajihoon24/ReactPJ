@@ -18,7 +18,12 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+::selection{
 
+    background-color: rgb(218, 218, 218);
+
+
+}
 hr {
     border: none;
     border-top: 1px solid var(--hr-color);

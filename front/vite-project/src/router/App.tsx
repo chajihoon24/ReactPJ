@@ -4,7 +4,7 @@ import { AppProvider } from "../contexts/AppProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthLayout from "../layout/AuthLayout";
 import AppLayout from "../layout/AppLayout";
-import Template from "../pages/template";
+import Template from "../pages/Template";
 
 // 인증 관련
 const Login = lazy(() => import("../pages/Login"));
