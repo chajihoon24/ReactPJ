@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useAppSetting } from "../contexts/AppSettingContext";
-import { IconPanel } from "../components/icons/Icons";
+import { IconPanel, IconSearch } from "../components/icons/Icons";
 
 function createList(arr) {
     return arr.map((title, index) => (
@@ -50,20 +50,7 @@ export default function SideNav() {
         "
                     />
                     <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <path d="m21 21-4.34-4.34" />
-                            <circle cx="11" cy="11" r="8" />
-                        </svg>
+                        <IconSearch size={18} weight={1.5}/>
                     </span>
                     <button className="my-auto mx-4">
                         <IconPanel size={24} />

@@ -1,160 +1,32 @@
 import { useState } from "react";
-import { BreadCrumb } from "../components/breadcrumb/Breadcrumb";
-import {
-    IconBookmark,
-    IconEllipsis,
-    IconInfo,
-    IconRefresh,
-    IconSetting,
-    IconTrash,
-} from "../components/icons/Icons";
+import { PageHeader } from "../components/template/common/PageHeader";
+import { SearchInput } from "../components/input/Input";
 
 export default function Template() {
-    const tabs = [
-        "대시보드",
-        "인사정보",
-        "로그조회",
-        "재무관리",
-        "기관별 시설관리",
-        "연도별평가 기록부",
-    ];
-    const [active, setActive] = useState("대시보드");
-
     const [isBookmark, setBookmark] = useState(false);
+
+    const [search1, setSearch1] = useState("")
+    const [combo]
+
+
 
     return (
         <div>
-            <div className="flex">
-                <div className="flex pt-1 bg-gray-200 w-4/5">
-                    <ul className="flex gap-2 pt-40 h-full bg-gray-200 mb-4">
-                        {tabs.map((tab) => {
-                            const isActive = active === tab;
-
-                            return (
-                                <li
-                                    key={tab}
-                                    className={`
-              flex items-center gap-1 px-3 py-1.5
-              text-sm cursor-pointer rounded-t-sm font-semibold
-              ${
-                  isActive
-                      ? "bg-white border-b-2 border-gray-400"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }
-            `}
-                                    onClick={() => setActive(tab)}
-                                >
-                                    <span>{tab}</span>
-                                    <button
-                                        className="ml-1 text-gray-400 hover:text-gray-600 ml-3 mb-1"
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            // 히스토리 제거 로직
-                                        }}
-                                    >
-                                        ×
-                                    </button>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-
-                <ul className="flex items-center gap-1 px-2 ml-auto">
-                    <li className="border-r border-gray-300">
-                        <button
-                            className="
-        flex items-center justify-center
-        w-8 h-8 rounded
-        text-gray-500
-        hover:bg-gray-100 hover:text-gray-700 mx-2  
-      "
-                            title="히스토리 전체 삭제"
-                        >
-                            <IconTrash size={20} />
-                        </button>
-                    </li>
-
-                    <li className="border-r border-gray-300">
-                        <button
-                            className="
-        flex items-center justify-center
-        w-8 h-8 rounded
-        text-gray-500
-        hover:bg-gray-200 hover:text-gray-700 mx-2
-      "
-                            title="정보"
-                        >
-                            <IconInfo size={20} weight={2} />
-                        </button>
-                    </li>
-
-                    <li className="border-r border-gray-300">
-                        <button
-                            className="
-        flex items-center justify-center
-        w-8 h-8 rounded
-        text-gray-500
-        hover:bg-gray-200 hover:text-gray-700 mx-2 
-      "
-                            title="정보"
-                        >
-                            <IconSetting size={20} weight={2} />
-                        </button>
-                    </li>
-                    <li className="text-sm ml-4 text-gray-500">
-                        최대 탭 개수 :{" "}
-                        <span className="text-gray-700 font-semibold">7 </span>
-                        /10
-                    </li>
-                </ul>
-            </div>
-
             <div className="h-400 bg-white rounded-b-md rounded-t-sm">
-                <div className="flex">
-                    <div className="flex pl-8 py-4 text-2xl font-bold">
-                        <div>임직원 상세 조회</div>
-                    </div>
-                    <BreadCrumb
-                        className="pl-8 py-4"
-                        items={[
-                            { label: "대시보드", href: "/dashboard" },
-                            { label: "가이드", href: "/guide" },
-                            { label: "임직원 상세" },
-                        ]}
-                    />
-                    <button className="ml-4 my-auto p-2 border-gray-300 border rounded-md hover:bg-gray-100">
-                        <IconRefresh size={14} weight={2}></IconRefresh>
-                    </button>
-                    <button className="ml-auto my-auto">
-                        <IconBookmark weight={1.5} />
-                    </button>
-                    <button className="my-auto ml-4 mr-8">
-                        <IconEllipsis weight={1.5} />
-                    </button>
-                </div>
-
+                <PageHeader />
                 <div className="border-b-[1px] border-gray-300"></div>
                 {/* 조회란 */}
                 <div className="px-8 py-4 bg-gray-50 border-b border-gray-200">
                     <div className="flex items-center gap-6">
                         {/* 이름 */}
-                        <div className="flex items-center gap-2">
-                            <label className="text-sm font-semibold text-gray-600 w-16">
-                                이름
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="임직원명 입력"
-                                className="
-                                w-48 px-3 py-1.5
-                                border border-gray-300 rounded
-                                text-sm
-                                focus:outline-none focus:ring-1 focus:ring-blue-400
-                                "
-                            />
-                        </div>
-
+                        <SearchInput
+                            label="이름"
+                            type="text"
+                            placeholder="이름을 입력하세요"
+                            value={search1}
+                            width="md"
+                            onChange={setSearch1}
+                        />
                         {/* 부서 */}
                         <div className="flex items-center gap-2">
                             <label className="text-sm font-semibold text-gray-600 w-16">
@@ -173,7 +45,6 @@ export default function Template() {
                                 <option>개발팀</option>
                             </select>
                         </div>
-
                         {/* 상태 */}
                         <div className="flex items-center gap-2">
                             <label className="text-sm font-semibold text-gray-600 w-16">
@@ -192,7 +63,6 @@ export default function Template() {
                                 <option>퇴직</option>
                             </select>
                         </div>
-
                         {/* 버튼 영역 */}
                         <div className="flex items-center gap-2 ml-auto">
                             <button

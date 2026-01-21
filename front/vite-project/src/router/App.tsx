@@ -7,7 +7,7 @@ import AppLayout from "../layout/AppLayout";
 import Template from "../pages/Template";
 
 // 인증 관련
-const Login = lazy(() => import("../pages/Login"));
+import Login from "../pages/Login"
 
 // App 페이지
 const Dashboard = lazy(() => import("../pages/app/Dashboard"));

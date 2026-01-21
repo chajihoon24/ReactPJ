@@ -1,10 +1,9 @@
 // copy OuterHTML
-// 아이콘 컴포넌트 모음 파일입니다.
-// setting
+
+// [setting]
 const DEFAULT_COLOR = "#434343";
 const DEFAULT_SIZE = 24;
 const DEFAULT_WEIGHT = 1;
-
 
 interface IconProps {
     size?: number;
@@ -14,10 +13,8 @@ interface IconProps {
     weight?: number;
 }
 
-
 //=============================================================
-//아이콘 컴포넌트
-
+// [아이콘 컴포넌트]
 
 export function IconBookmark({
     size = DEFAULT_SIZE,
@@ -75,7 +72,6 @@ export function IconTrash({
     size = DEFAULT_SIZE,
     className,
     fill = DEFAULT_COLOR,
-    stroke = DEFAULT_COLOR,
     weight = DEFAULT_WEIGHT,
 }: IconProps) {
     return (
@@ -138,6 +134,30 @@ export function IconRefresh({
         >
             <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
             <path d="M3 3v5h5" />
+        </svg>
+    );
+}
+
+export function IconSearch({
+    size = DEFAULT_SIZE,
+    className,
+    stroke,
+    weight = DEFAULT_WEIGHT,
+}: IconProps) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={size}
+            height={size}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
         </svg>
     );
 }
